@@ -1,0 +1,10 @@
+{
+  "dotenv": true,
+  "engines": {
+    "node": "^8.x.x"
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "name": "yelp-camp"
+}
