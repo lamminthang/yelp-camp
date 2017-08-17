@@ -42,32 +42,32 @@ Coming Soon: ~~[Live Demo]('#')~~
 
 Name     | Endpoint                       | Verb    | Description                                 |
 ---------|--------------------------------|---------|---------------------------------------------|
-Facebook | /auth/facebook                 | POST    | Request authentication via Facebook.        |
-Google   | /auth/google                   | POST    | Request authentication via Google.          |
-Twitter  | /auth/twitter                  | POST    | Request authentication via Twitter.         |
+Facebook | `/auth/facebook`                 | GET    | Request authentication via Facebook.        |
+Google   | `/auth/google`                   | GET    | Request authentication via Google.          |
+Twitter  | `/auth/twitter`                  | GET    | Request authentication via Twitter.         |
 
 ### Campgrounds
 
-> All routes prefixed by `/campgrounds
+> All routes prefixed by `/campgrounds`.
 
 Name   | Endpoint                       | Verb    | Description                                 |
 -------|--------------------------------|---------|---------------------------------------------|
-GET    | /                              | GET     | Render view for *all* campgrounds.          |
-NEW    | /new                           | GET     | Render view for adding campground.          |
-CREATE | /                              | POST    | Add a campground to the database.           |
-SHOW   | /:id                           | GET     | Render view for *single* campground.        |
-EDIT   | /:id/edit                      | GET     | Render view for editing a campground.       |
-UPDATE | /:id                           | PUT     | Render view *after* updating a campground.  |
-REMOVE | /:id                           | DELETE  | Render view *after* removing a campground.  |
+GET    | `/`                              | GET     | Render view for *all* campgrounds.          |
+NEW    | `/new`                          | GET     | Render view for adding campground.          |
+CREATE | `/`                              | POST    | Add a campground to the database.           |
+SHOW   | `/:id`                           | GET     | Render view for *single* campground.        |
+EDIT   | `/:id/edit`                      | GET     | Render view for editing a campground.       |
+UPDATE | `/:id`                           | PUT     | Render view *after* updating a campground.  |
+REMOVE | `/:id`                           | DELETE  | Render view *after* removing a campground.  |
 
 ### Comments
 
-> All routes prefixed by `/campgrounds/:id/comments
+> All routes prefixed by `/campgrounds/:id/comments`.
 
 Name   | Endpoint           | Verb    | Description                                                     |
 -------|--------------------|---------|-----------------------------------------------------------------|
-NEW    | /new               | GET     | Render view for adding a new comment to current campground.     |
-CREATE | /                  | POST    | Add a comment to the database for current campground.           |
-EDIT   | /:comment_id/edit  | GET     | Render view for editing a comment for current campground.       |
-UPDATE | /:comment_id       | PUT     | Render view *after* updating a comment for current campground.  |
-REMOVE | /:comment_id       | DELETE  | Render view *after* removing a comment for current campground.  |
+NEW    | `/new`               | GET     | Render view for adding a new comment to current campground.     |
+CREATE | `/`                  | POST    | Add a comment to the database for current campground.           |
+EDIT   | `/:comment_id/edit`  | GET     | Render view for editing a comment for current campground.       |
+UPDATE | `/:comment_id`       | PUT     | Render view *after* updating a comment for current campground.  |
+REMOVE | `/:comment_id`       | DELETE  | Render view *after* removing a comment for current campground.  |
