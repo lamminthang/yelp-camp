@@ -8,7 +8,6 @@
 [![nps](https://img.shields.io/badge/scripts%20run%20with-nps-blue.svg?style=flat-square)](https://github.com/kentcdodds/nps)
 
 [![Now](https://img.shields.io/badge/deployed%20with-now--cli-orange.svg?style=flat-square)](https://github.com/zeit/now-cli)
-[![API Docs](https://img.shields.io/badge/apidocs-hosted%20on%20surge-orange.svg?style=flat-square)]('#')
 
 A Yelp like clone for campgrounds.
 
@@ -16,14 +15,14 @@ This project utilizes the latest JavaScript syntax available in NodeJS.
 
 ## TODO :heavy_check_mark: :heavy_check_mark: :heavy_check_mark:
 
-- [ ] Setup relationship for User Model with multiple authentication models.
-- [ ] Finalize styling.
-- [ ] Create external docs with `apidocs`.
-- [ ] Host external docs with `surge`.
-- [ ] Turn on _production_ environment with social authentication services.
+- [x] Setup relationship for User Model with multiple authentication models.
+- [x] Finalize styling.
+- [x] ~~Create external docs with `apidocs`.~~
+- [x] ~~Host external docs with `surge`.~~
+- [x] Turn on _production_ environment with social authentication services.
 - [ ] Deploy _production_ ready application to [Zeit](https:/zeit.co) using `now-cli`.
 
-Coming Soon: ~~[Live Demo]('#')~~
+[Live Beta Demo](https://yelp-camp-afimdblmwo.now.sh)
 
 > NOTE: The deployment is not scaled and the database is a free sandbox so it will take a few minutes to load up!
 
