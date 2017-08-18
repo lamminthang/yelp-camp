@@ -31,9 +31,6 @@ router.post('/', isLoggedIn, async ({ body, user }, res) => {
     throw e
   }
 })
-// FIXME - if user is not authenticated should redirect in middleware
-// to '/login' instead GET http://localhost:3000/campgrounds/new net::ERR_EMPTY_RESPONSE
-// going back flash message shows up.
 router.get('/new', isLoggedIn, (req, res) => {
   res.render('campground/new')
 })
