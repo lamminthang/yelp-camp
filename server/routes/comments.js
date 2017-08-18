@@ -22,7 +22,6 @@ router.post('/', isLoggedIn, async ({ body, params, user }, res) => {
     try {
       const newComment = await Comment.create(comment)
       // Make one-to-many association of User > Comments.
-      console.log(user)
       newComment.author = {
         id: user._id,
         photo: user.photo,
