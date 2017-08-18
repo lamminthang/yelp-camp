@@ -6,6 +6,7 @@ const campgroundSchema = new mongoose.Schema({
       ref: 'User',
       type: mongoose.Schema.Types.ObjectId
     },
+    photo: String,
     username: String
   },
   comments: [

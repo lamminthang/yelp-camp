@@ -1,11 +1,14 @@
 <% include partials/header %>
-  <div class="container">
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Login</h1>
+  <div style="display:flex; flex-direction:column; justify-content:center; align-items:center">
+    <div>
+      <div class="card">
+        <img class="card-img-top" src="https://www.visitnc.com/resimg.php/imgcrop/2/52908/image/800/448/KerrCamping.jpg" alt="sunset">
+        <div class="card-block" style="text-align:center">
+          <p class="card-text">Catch a sunset in North Caolina with the ones you love! <a href="https://visitnc.com/">img src</a></p>
+        </div>
       </div>
     </div>
-    <div class="container">
+    <div style="padding: 1em 0;">
       <a href="/auth/facebook" class="btn btn-block btn-social btn-facebook">
         <span class="fa fa-facebook"></span>
         Login with Facebook
@@ -19,6 +22,8 @@
         Login with Google
       </a>
     </div>
-    <h4>Not a user?<a href="/register">Sign Up!</a></h4>
+    <div style="padding: 1em 0;">
+      <h4>Not a user yet? <a href="/register">Sign Up!</a></h4>
+    </div>
   </div>
   <% include partials/footer %>

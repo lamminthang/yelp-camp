@@ -22,7 +22,12 @@ router.post('/', isLoggedIn, async ({ body, params, user }, res) => {
     try {
       const newComment = await Comment.create(comment)
       // Make one-to-many association of User > Comments.
-      newComment.author = { id: user._id, username: user.username }
+      console.log(user)
+      newComment.author = {
+        id: user._id,
+        photo: user.photo,
+        username: user.username
+      }
       // Must save comment to persist before pushing to array.
       newComment.save()
       await campground.comments.push(newComment)

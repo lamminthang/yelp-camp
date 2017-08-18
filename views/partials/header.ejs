@@ -36,8 +36,10 @@
 
           <% } else { %>
             <li class="nav-item">
-              <a class="nav-link">Signed in as:
-              <%= user.username %></a>
+              <a class="nav-link">
+                <img class="rounded" src="<%= user.photo %>" alt="<%= user.username %>">
+                <%= user.username %>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/campgrounds">Campgrounds</a>

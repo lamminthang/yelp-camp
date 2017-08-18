@@ -21,7 +21,10 @@ module.exports = new FacebookStrategy(
       const fbUser = await FbAuth.findOne({ facebookId: profile.id })
       if (!existingUser && !fbUser) {
         // 1. No document in either User or FbAuth
-        const newUser = await User.create({ username: profile.displayName })
+        const newUser = await User.create({
+          photo: profile.photos[0].value,
+          username: profile.displayName
+        })
         await FbAuth.create({
           // Create association on model.
           _id: newUser._id,

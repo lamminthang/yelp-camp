@@ -1,37 +1,36 @@
 <% include ../partials/header %>
-
-  <div class="container">
-    <header class="jumbotron">
-      <div class="container">
-        <% if (!user) { %>
-          <h1>Welcome to YelpCamp</h1>
-          <% } else { %>
-            <h1>Welcome back
-              <%= user.username %>
-            </h1>
-            <% } %>
+  <div style="display:flex; flex-direction:column; justify-content:center; overflow-x:hidden">
+    <div class="jumbotron" style="margin-bottom:0; padding:2rem 2rem;">
+      <% if (!user) { %>
+        <h1 class="display-3">Welcome to YelpCamp</h1>
+        <% } else { %>
+          <h1 class="display-5">
+            Welcome back
+            <%= user.username %>
+          </h1>
+          <% } %>
+            <hr class="my-4">
+            <p class="lead">
               <p>View our hand-picked campgrounds from all over the world!</p>
-              <p>
-                <a href="/campgrounds/new" class="btn btn-primary btn-large">Add New Campground</a>
-              </p>
-      </div>
-    </header>
-    <div class="row justify-content-center">
-      <% campgrounds.forEach(campground => { %>
-        <div class="col">
-          <div class="thumbnail text-center">
-            <img src="<%=campground.image %>" alt="<%= campground.name %>">
-            <div class="caption">
-              <h4>
-                <%= campground.name %>
-              </h4>
-            </div>
-            <p>
-              <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+              <a class="btn btn-primary btn-lg" href="/campgrounds/new" role="button">Add New Campground</a>
             </p>
+    </div>
+    <div style="display:flex; flex-direction:column; justify-content:center; margin: 1em; overflow-y:scroll">
+      <div class="row">
+        <% campgrounds.forEach(campground => { %>
+          <div class="col">
+            <div class="card" style="height:20rem; margin: 0.5em; width:20rem;">
+              <img class="card-img-top" src="<%=campground.image %>" alt="<%= campground.name %>">
+              <div class="card-block" style="text-align:center">
+                <h4 class="card-title" style="margin-top:0.5em">
+                  <%= campground.name %>
+                </h4>
+                <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary" style="margin-bottom:0.5em">More Info</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <% }) %>
+          <% }) %>
+      </div>
     </div>
   </div>
   <% include ../partials/footer %>

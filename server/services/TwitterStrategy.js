@@ -20,7 +20,10 @@ module.exports = new TwitterStrategy(
       const twitterUser = await TwitterAuth.findOne({ twitterId: profile.id })
       if (!existingUser && !twitterUser) {
         // 1. No document in either User or TwitAuth
-        const newUser = await User.create({ username: profile.displayName })
+        const newUser = await User.create({
+          photo: profile.photos[0].value,
+          username: profile.displayName
+        })
         await TwitterAuth.create({
           // Create association on model.
           _id: newUser._id,

@@ -1,11 +1,14 @@
 <% include partials/header %>
-  <div class="container">
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Sign Up with YelpCamp!</h1>
+  <div style="display:flex; flex-direction:column; justify-content:center; align-items:center">
+    <div>
+      <div class="card">
+        <img class="card-img-top" src="https://onmilwaukee.com/images/articles/ca/camping/camping_fullsize_story1.jpg" alt="mountains">
+        <div class="card-block" style="text-align:center">
+          <p class="card-text">See the world as never seen before! <a href="https://onmilwaukee.com/">img src</a></p>
+        </div>
       </div>
     </div>
-    <div class="container">
+    <div style="padding: 1em 0;">
       <a href="/auth/facebook" class="btn btn-block btn-social btn-facebook">
         <span class="fa fa-facebook"></span>
         Sign up with Facebook
@@ -19,6 +22,8 @@
         Sign up with Google
       </a>
     </div>
-    <h4>Already a user?<a href="/login">Sign In.</a></h4>
+    <div style="padding: 1em 0;">
+      <h4>Already a user? <a href="/login">Login!</a></h4>
+    </div>
   </div>
   <% include partials/footer %>

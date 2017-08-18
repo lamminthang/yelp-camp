@@ -19,7 +19,11 @@ router.post('/', isLoggedIn, async ({ body, user }, res) => {
   try {
     const newCampground = await Campground.create(campground)
     // Make one-to-many association of User > Campgrounds.
-    newCampground.author = { id: user._id, username: user.username }
+    newCampground.author = {
+      id: user._id,
+      photo: user.photo,
+      username: user.username
+    }
     // Must save campground to persist changes made.
     newCampground.save()
     res.redirect('/campgrounds')

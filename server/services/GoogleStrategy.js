@@ -20,7 +20,10 @@ module.exports = new GoogleStrategy(
       const googleUser = await GoogleAuth.findOne({ googleId: profile.id })
       if (!existingUser && !googleUser) {
         // 1. No document in either User or GoogAuth
-        const newUser = await User.create({ username: profile.displayName })
+        const newUser = await User.create({
+          photo: profile.photos[0].value,
+          username: profile.displayName
+        })
         await GoogleAuth.create({
           // Create association on model.
           _id: newUser._id,
